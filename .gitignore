@@ -1,0 +1,6 @@
+*.pyc
+*~
+*.geany
+dev.db
+local_settings.py
+static/admin
