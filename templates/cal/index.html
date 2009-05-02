@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block "title" %}Kalender{% endblock %} 
+{% block "headline" %}Kalender{% endblock %}
+
+{% block "content" %} 
+
+<h2>Kommende arrangementer</h2>
+<p>
+Arrangementer rundt omkring. Kom og lyt!
+</p>
+{% if event_list %} 
+    <table>
+    <tr><th>Arrangement</th><th>Sted</th>
+        <th>Dato</th><th>Tidspunkt</th></tr>
+    {% for e in event_list %}
+        <tr>
+            <td>{% if e.link %}
+                    <a href="{{ e.link }}" 
+                        title="{{ e.name }} ">{{ e.name }}</a>
+                {% else %} {{ e.name }} 
+                {% endif %}</td>
+            <td>{% if e.address %}
+                    <a href="http://maps.google.com/maps?&amp;q={{ e.address|urlencode }}" 
+                        title="vis på kort">{{ e.loc }}</a>
+                {% else %}{{ e.loc }}
+                {% endif %}</td>
+            <td>{{ e.date.date }}</td>
+            <td>{{ e.date.time }}</td>
+        </tr>
+    {% endfor %} 
+    </table>
+
+{% else %}
+    <p>Der er desværre ikke planlagt nogen arrangementer i den nærmeste fremtid.</p>
+{% endif %} 
+{% endblock %}

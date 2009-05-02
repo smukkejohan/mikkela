@@ -1,0 +1,25 @@
+body {background: #217281 url(../img/node.png) 0 150px no-repeat;}
+.container.main {background: url(../img/white.png);}
+
+#header {margin-top: 18px; height: 160px;}
+#footer {background: #000000; 
+    color: #ffffff; margin-top: 18px;}
+    
+h1 {font-family: georgia; font-style: italic; color: #eeeeec;}
+
+#navigation {margin: 54px 18px;}
+#navigation li {list-style-type: none; margin-bottom: 18px;}
+#navigation a {display: block; 
+    text-decoration: none;
+    color: #eeeeec;
+    padding-left: 12px;
+    background: url(../img/sprite.png) no-repeat 0 0;
+    font-family: georgia;
+    font-size:1.4em;
+    line-height:2.15;}
+    
+#navigation li a:hover, li a:active, li a:focus {color: #000000;
+    background: url(../img/sprite.png) no-repeat 0 -36px;}
+
+#navigation li.current a {color: #000000;
+     background: url(../img/sprite.png) no-repeat 0 -72px;}
