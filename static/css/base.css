@@ -1,11 +1,13 @@
 body {background: #217281 url(../img/node.png) 0 150px no-repeat;}
-.container.main {background: url(../img/white.png);}
+#main {background: url(../img/white.png);}
 
-#header {margin-top: 18px; height: 160px;}
+#header {margin: 18px auto; height: 160px;}
 #footer {background: #000000; 
     color: #ffffff; margin-top: 18px;}
     
 h1 {font-family: georgia; font-style: italic; color: #eeeeec;}
+
+#primary-content, #sidebar {padding-top: 18px;}
 
 #navigation {margin: 54px 18px;}
 #navigation li {list-style-type: none; margin-bottom: 18px;}
