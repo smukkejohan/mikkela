@@ -5,7 +5,7 @@ body {background: #217281 url(../img/node.png) 0 150px no-repeat;}
 #footer {background: #000000; 
     color: #eeeeec;
     margin: 18px auto;}
-#footer p {padding-left: 18px;}
+#footer p {padding: 18px 18px 0;}
     
 h1 {font-family: georgia; font-style: italic; color: #eeeeec;}
 
