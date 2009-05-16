@@ -1,9 +1,15 @@
-body {background: #217281 url(../img/node.png) 0 150px no-repeat;}
+body {background: #217281 url(../img/node.png) 0 150px no-repeat; color: #2e3436;}
 #main {background: url(../img/white.png);}
 
-#header {margin: 18px auto; height: 90px;}
-#footer {background: #000000; 
-    color: #eeeeec;
+#header {margin: 18px auto; 
+    height: 108px; 
+    position: relative; 
+    background: #2e3436; 
+    color: #eeeeec;}
+
+h1 {position: absolute; bottom: 0; left: 18px;}
+#footer {background: #2e3436; 
+    color: #babdb6;
     margin: 18px auto;}
 #footer p {padding: 18px 18px 0;}
     
@@ -28,5 +34,5 @@ h1 {font-family: georgia; font-style: italic; color: #eeeeec;}
 #navigation li a:hover, li a:active, li a:focus {color: #000000;
     background: url(../img/sprite.png) no-repeat 0 -36px;}
 
-#navigation li.current a {color: #000000;
+#navigation li.current a {color: #2e3436;
      background: url(../img/sprite.png) no-repeat 0 -72px;}
