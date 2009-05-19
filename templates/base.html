@@ -48,37 +48,55 @@
                 <span>Lyt</span></a></li>
         </ul>
         
-        <div class="section">
-            <p>SyZyGy</p>
-        </div>
+        
         
     </div>
     
-    <div class="span-13" id="primary-content">
+    <div class="span-13 append-1" id="primary-content">
+    
         {% block "content" %}
         {% endblock %}
+        
+        <div class="span-13 last">
+            <a href="#primary-content">til toppen</a>
+        </div>
     </div>
     
-    <div class="span-5 last" id="secondary-content">
+    <div class="span-4 last" id="secondary-content">
+        
+        {% block "secondary-content" %}
+        {% endblock %}
+        
+        <h2>Ensembler</h2>
+        <ul>
+            <li><a href="http://syzygy.dk">Syzygy</a></li>
+            <li><a href="http://www.sanguine.dk/">Sanguine</a></li>
+            <li><a href="http://www.coronaguitarkvartet.dk/">Corona Guitar Kvartet</a></li>
+        </ul>
+        
     </div>
     
 </div>
 
 <div class="container" id="footer">
-    <div class="span-8">
+    <div class="span-6">
         <p>Kontakt: Mikkel Andersen <br />Tlf.: 2812 6472  <br />Mail: Info@mikkelandersen.dk</p>
     </div>
     
-    <div class="span-8">
-        <p>
-            
-        </p>
+    <div class="span-6">
+           <p></p> 
     </div>
-    
-    <div class="span-8 last">
-        <p>Foto: Jesper Jørgensen &copy;<!--<br /> Design: Carina Flagfeldt Johansen & Johan Bichel Lindegaard--> <br /> Powered by Django - hosted on a linode</p>
+        
+    <div class="span-6">
+        <p><!--Foto: Jesper Jørgensen &copy;--></p>
+    </div>
+        
+    <div class="span-6 last">
+        <p>Foto: Jesper Jørgensen &copy;</p>
     </div>
 </div>
+
+<!-- Design: Carina Flagfeldt Johansen og Johan Bichel Lindegaard-->
 
 </body>
 </html>

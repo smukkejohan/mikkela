@@ -16,6 +16,7 @@ h1 {position: absolute; bottom: 0; left: 18px;}
 h1 {font-family: georgia; font-style: italic; color: #eeeeec;}
 
 #primary-content, #sidebar {padding-top: 18px; margin-bottom: 36px;}
+#secondary-content {padding-top: 72px; overflow: hidden;}
 #primary-content img {border: 2px solid #000000; margin-bottom: 18px}
 
 #sidebar .section {margin: 18px;}
@@ -26,13 +27,13 @@ h1 {font-family: georgia; font-style: italic; color: #eeeeec;}
     text-decoration: none;
     color: #eeeeec;
     padding-left: 12px;
-    background: url(../img/sprite.png) no-repeat 0 0;
+    background: transparent url(../img/sprite.png) no-repeat 0 0;
     font-family: georgia;
     font-size:1.4em;
     line-height:2.15;}
     
 #navigation li a:hover, li a:active, li a:focus {color: #000000;
-    background: url(../img/sprite.png) no-repeat 0 -36px;}
+    background-position: 0 -36px;}
 
 #navigation li.current a {color: #2e3436;
-     background: url(../img/sprite.png) no-repeat 0 -72px;}
+    background-position: 0 -72px;}
