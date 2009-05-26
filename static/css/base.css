@@ -37,3 +37,5 @@ h1 {font-family: georgia; font-style: italic; color: #eeeeec;}
 
 #navigation li.current a {color: #2e3436;
     background-position: 0 -72px;}
+    
+th td, caption {white-space:nowrap;}

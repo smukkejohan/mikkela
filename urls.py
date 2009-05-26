@@ -10,17 +10,20 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
 )
 
-event_list = Event.objects.all()
-
 urlpatterns += patterns('django.views.generic.simple',
-    url(r'^$',              'direct_to_template', 
-        {'template': 'index.html', 'extra_context':{'event_list': event_list}}),
+    url(r'^$', 'direct_to_template', 
+        {'template': 'index.html', 
+            'extra_context':{
+                'event_list': Event.future.all()
+            }
+        }),
     url(r'^mikkel/$',       'direct_to_template', {'template': 'mikkel.html'}),
     url(r'^virksomhed/$',   'direct_to_template', {'template': 'virksomhed.html'}),
     url(r'^kirke/$',        'direct_to_template', {'template': 'kirke.html'}),
     url(r'^bryllup/$',      'direct_to_template', {'template': 'bryllup.html'}),
     url(r'^privat/$',       'direct_to_template', {'template': 'privat.html'}),
     url(r'^musik/$',        'direct_to_template', {'template': 'musik.html'}),
+    url(r'^testimonials/$', 'direct_to_template', {'template': 'testimonials.html'}),
 )
 
 # Serve static media through django if we are on a development server

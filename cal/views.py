@@ -8,7 +8,7 @@ def index(request):
     Events of the coming months sorted in to a list for each month
     """
     
-    event_list = Event.objects.all()
+    event_list = Event.future.all()
     return render_to_response('cal/index.html', {
         'event_list': event_list, 
         #'form': EventForm()
