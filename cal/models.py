@@ -17,7 +17,7 @@ class Event(models.Model):
         return self.name
     
     class Meta:
-        ordering = ('-date',)
+        ordering = ('date',)
         get_latest_by = 'date'
         verbose_name = 'arrangement'
         verbose_name_plural = 'arrangementer'
