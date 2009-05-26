@@ -19,8 +19,9 @@ CD’en indeholder 13 numre og et 16 siders teksthæfte.
 </p>
 
 <h2>Kommende arrangementer</h2>
-<p>næste arrangemnter</p>
-<a>se alle arrangementer</a>
+{% include "cal/event_list_snippet.html" %} 
+
+<p><a href="/kalender/">Se alle kommende arrangementer</a></p>
 
 <div class="span-9">
 <img src="{{ MEDIA_URL }}img/content/mikkel_5408.jpg" alt="Mikkel Andersen"/>

@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import *
+from mikkel.cal.models import Event
 import settings
 
 from django.contrib import admin
@@ -9,8 +10,11 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
 )
 
+event_list = Event.objects.all()
+
 urlpatterns += patterns('django.views.generic.simple',
-    url(r'^$',              'direct_to_template', {'template': 'index.html'}),
+    url(r'^$',              'direct_to_template', 
+        {'template': 'index.html', 'extra_context':{'event_list': event_list}}),
     url(r'^mikkel/$',       'direct_to_template', {'template': 'mikkel.html'}),
     url(r'^virksomhed/$',   'direct_to_template', {'template': 'virksomhed.html'}),
     url(r'^kirke/$',        'direct_to_template', {'template': 'kirke.html'}),
