@@ -14,8 +14,8 @@
                         title="vis på kort">{{ e.loc }}</a>
                 {% else %}{{ e.loc }}
                 {% endif %}</td>
-            <td>{{ e.date.date|date }}</td>
-            <td>kl. {{ e.date.time|time }}</td>
+            <td class="e-date">{{ e.date.date|date }}</td>
+            <td class="e-time">kl. {{ e.date.time|time }}</td>
         </tr>
     {% endfor %} 
     </table>
