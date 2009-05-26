@@ -14,7 +14,7 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^$', 'direct_to_template', 
         {'template': 'index.html', 
             'extra_context':{
-                'event_list': Event.future.all()
+                'event_list': Event.future.all()[:4]
             }
         }),
     url(r'^mikkel/$',       'direct_to_template', {'template': 'mikkel.html'}),
