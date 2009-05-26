@@ -26,6 +26,11 @@ LANGUAGE_CODE = 'dk-DK'
 SITE_ID = 1
 USE_I18N = False
 
+DATETIME_FORMAT = 'd/m - Y H:i'
+DATE_FORMAT = 'd/m - Y'
+TIME_FORMAT = 'H:i'
+
+
 MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'static')
 
 TEMPLATE_LOADERS = (

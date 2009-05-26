@@ -14,7 +14,7 @@ Arrangementer rundt omkring. Kom og lyt!
     <tr><th>Arrangement</th><th>Sted</th>
         <th>Dato</th><th>Tidspunkt</th></tr>
     {% for e in event_list %}
-        <tr>
+        <tr class="{% cycle 'odd' 'even' %}">
             <td>{% if e.link %}
                     <a href="{{ e.link }}" 
                         title="{{ e.name }} ">{{ e.name }}</a>
@@ -25,8 +25,8 @@ Arrangementer rundt omkring. Kom og lyt!
                         title="vis på kort">{{ e.loc }}</a>
                 {% else %}{{ e.loc }}
                 {% endif %}</td>
-            <td>{{ e.date.date }}</td>
-            <td>{{ e.date.time }}</td>
+            <td>{{ e.date.date|date }}</td>
+            <td>kl. {{ e.date.time|time }}</td>
         </tr>
     {% endfor %} 
     </table>
