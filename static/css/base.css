@@ -4,7 +4,7 @@ body {background: #217281 url(../img/node.png) 0 150px no-repeat; color: #2e3436
 #header {margin: 18px auto; 
     height: 108px; 
     position: relative; 
-    background: #2e3436; 
+    background: #2e3436 url(../img/header.png) 0 0 no-repeat; 
     color: #eeeeec;}
 
 h1 {position: absolute; bottom: 0; left: 18px;}
