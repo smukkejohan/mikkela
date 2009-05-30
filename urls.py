@@ -7,6 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^kalender/', include('mikkel.cal.urls')),
+    (r'^testimonials/', include('mikkel.testimonials.urls')),
     (r'^admin/', include(admin.site.urls)),
 )
 
@@ -23,7 +24,6 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^bryllup/$',      'direct_to_template', {'template': 'bryllup.html'}),
     url(r'^privat/$',       'direct_to_template', {'template': 'privat.html'}),
     url(r'^musik/$',        'direct_to_template', {'template': 'musik.html'}),
-    url(r'^testimonials/$', 'direct_to_template', {'template': 'testimonials.html'}),
 )
 
 # Serve static media through django if we are on a development server

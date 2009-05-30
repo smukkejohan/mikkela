@@ -57,6 +57,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'mikkel.cal',
     'mikkel.sound',
+    'mikkel.testimonials',
 )
 
 # import sensitive information,

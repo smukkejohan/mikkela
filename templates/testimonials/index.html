@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block "title" %}Testimonials{% endblock %} 
+{% block "headline" %}Testimonials{% endblock %}
+
+{% block "content" %} 
+
+<h2>Hvad siger folk?</h2>
+
+{% if q_list %} 
+    
+    
+    {% for q in q_list %}
+        
+        <blockquote>{{ q.quote }}</blockquote> 
+        <p>Sagde {{ q.name }} 
+        {% if q.place %} fra {{ q.place }} {% endif %} 
+        {% if q.date %}  d. {{ q.date|date }} {% endif %}
+        {% if q.event %}  til {{ q.event }} {% endif %}
+        </p>
+                  
+    {% endfor %} 
+
+{% else %}
+    <p>Der er desværre ingen Testimonials.</p>
+{% endif %}
+ 
+{% endblock %}
