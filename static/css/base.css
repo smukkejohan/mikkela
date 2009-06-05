@@ -1,4 +1,6 @@
-body {background: #217281 url(../img/node.png) 0 150px no-repeat; color: #2e3436;}
+body {background: #217281 url(../img/node.png) 0 150px no-repeat; 
+    color: #2e3436;
+    font-family: helvetica, arial;}
 #main {background: url(../img/white.png);}
 
 #header {margin: 18px auto; 

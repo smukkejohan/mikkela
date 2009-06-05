@@ -56,7 +56,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     'mikkel.cal',
-    'mikkel.sound',
     'mikkel.testimonials',
 )
 
