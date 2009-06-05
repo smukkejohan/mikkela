@@ -13,7 +13,7 @@ if DEVELOPMENT_MODE:
     CACHE_BACKEND = 'dummy:///'
 else:
     DEBUG = False
-    MEDIA_URL = 'http://static.mtest.accidentdesigns.dk/'
+    MEDIA_URL = 'http://static.mikkelandersen.dk/'
     ADMIN_MEDIA_PREFIX = MEDIA_URL + '/admin/'
     DATABASE_ENGINE = 'postgresql_psycopg2'
     DATABASE_USER = 'mikkel'

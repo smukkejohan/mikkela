@@ -6,7 +6,7 @@
         <tr class="{% cycle 'odd' 'even' %}">
             <td>{% if e.link %}
                     <a href="{{ e.link }}" 
-                        title="{{ e.name }} ">{{ e.name }}</a>
+                        title="{{ e.link }} ">{{ e.name }}</a>
                 {% else %} {{ e.name }} 
                 {% endif %}</td>
             <td>{% if e.address %}
