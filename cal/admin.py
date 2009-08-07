@@ -1,5 +1,5 @@
 from django.contrib import admin
-from mikkel.cal.models import Event
+from cal.models import Event
 
 class EventAdmin(admin.ModelAdmin):
     fields = ('name', 'date', 'loc', 'address', 'link')
@@ -8,3 +8,9 @@ class EventAdmin(admin.ModelAdmin):
     search_fields = ('name', 'loc')
 
 admin.site.register(Event, EventAdmin)
+
+#This should be moved to a location outside the cal app
+from django.contrib.sites.models import Site
+from django.contrib.auth.models import Group
+admin.site.unregister(Site)
+admin.site.unregister(Group)

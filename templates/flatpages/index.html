@@ -1,0 +1,17 @@
+{% extends "flatpages/default.html" %}
+
+{% load event_tags %} 
+
+{% block "content" %} 
+
+{{ flatpage.content }} 
+
+
+
+
+<h2>Kommende arrangementer</h2>
+{% get_coming_events 8 %} {% include "cal/event_list_snippet.html" %} 
+
+<p><a href="/kalender/">Se alle kommende arrangementer</a></p>
+
+{% endblock %}
