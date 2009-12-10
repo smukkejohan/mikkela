@@ -3,7 +3,7 @@ import os.path, platform
 ADMINS = (('Johan Bichel Lindegaard', 'mr.bichel@gmail.com'))
 MANAGERS = ADMINS
 
-DEVELOPMENT_MODE = (platform.node() != "li43-156")
+DEVELOPMENT_MODE = (platform.node() != "li140-9")
 
 if DEVELOPMENT_MODE:
     DEBUG = True    
