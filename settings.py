@@ -3,7 +3,7 @@ import os.path, platform
 ADMINS = (('Johan Bichel Lindegaard', 'mr.bichel@gmail.com'))
 MANAGERS = ADMINS
 
-DEVELOPMENT_MODE = (platform.node() != "li140-9")
+DEVELOPMENT_MODE = (platform.node() != "tango")
 
 if DEVELOPMENT_MODE:
     DEBUG = True    
@@ -16,8 +16,8 @@ else:
     MEDIA_URL = 'http://static.mikkelandersen.dk/'
     ADMIN_MEDIA_PREFIX = MEDIA_URL + '/admin/'
     DATABASE_ENGINE = 'postgresql_psycopg2'
-    DATABASE_USER = 'mikkel'
-    DATABASE_NAME = 'mikkel_db'
+    DATABASE_USER = 'mikkelandersen'
+    DATABASE_NAME = 'mikkelandersen_db'
     
 TEMPLATE_DEBUG = DEBUG
 
