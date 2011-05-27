@@ -8,10 +8,6 @@
 
 
 
-
-<h2>Kommende arrangementer</h2>
-{% get_coming_events 8 %} {% include "cal/event_list_snippet.html" %} 
-
-<p><a href="/kalender/">Se alle kommende arrangementer</a></p>
+{% get_coming_events 100 %} {% include "cal/event_list_snippet_new.html" %} 
 
 {% endblock %}

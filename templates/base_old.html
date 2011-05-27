@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="verify-v1" content="kdBHScTHXWxLE2kIUSU+d02jJN1Bimkz8AxjrB/6b+s=" >
+    <!-- Blueprint CSS framework -->
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/screen.css" 
+        type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/print.css" 
+        type="text/css" media="print" />
+     
+    <!--[if IE]><link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/ie.css" 
+        type="text/css" media="screen, projection" /><![endif]-->
+     
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" type="text/css" media="all" 
+		    href="{{ MEDIA_URL }}css/base.css" />	
+
+  <link href="{{ MEDIA_URL }}js/jquery.tweet.css" rel="stylesheet">
+  <script src="{{ MEDIA_URL }}js/jquery-1.3.2.js"></script>
+  <script src="{{ MEDIA_URL }}js/jquery.tweet.js" charset="utf-8"></script>
+	    
+    <title>{% block "title" %}{% endblock %} - Mikkel Andersen</title>
+  <script>
+    jQuery(document).ready(function($) {
+     /* $(".tweet").tweet({
+        join_text: "auto",
+        username: "seaofclouds",
+        avatar_size: 48,
+        count: 3,
+        auto_join_text_default: "we said,", 
+        auto_join_text_ed: "we",
+        auto_join_text_ing: "we were",
+        auto_join_text_reply: "we replied",
+        auto_join_text_url: "we were checking out",
+        loading_text: "loading tweets..."
+      });*/
+    })
+  </script>
+
+</head>
+<body>
+
+<div class="container" id="header">
+    <!--<a href="/">Mikkel Andersen</a>-->
+    <h1>{% block "headline" %}Mikkel{% endblock %}</h1>
+</div>    
+
+<div class="container" id="main">
+    <div class="span-6" id="sidebar">
+        <ul id="navigation">
+            <li><a href="/">
+                <span>Forside</span></a></li>
+            <li><a href="/virksomhed/">
+                <span>Virksomhed</span></a></li>
+            <li><a href="/kirke/">
+                <span>Kirke</span></a></li>
+            <li><a href="/bryllup/">
+                <span>Bryllup</span></a></li>
+            <li><a href="/privat/">
+                <span>Privat</span></a></li>
+            <li><a href="/kalender/">
+                <span>Kalender</span></a></li>
+            <li><a href="/mikkel/">
+                <span>Mikkel Andersen</span></a></li>
+            <li><a href="/testimonials/">
+                <span>Testimonials</span></a></li>
+            <li><a href="/musik/">
+                <span>Musik</span></a></li>
+            <li><a href="mailto:info@mikkelandersen.dk?subject=bestil_cd" title="Email info@mikkelandersen.dk for at bestille CD">Bestil CD</a> 
+        </ul>
+        
+        
+        
+    </div>
+    
+    <div class="span-13 append-1" id="primary-content">
+    
+        {% block "content" %}
+        {% endblock %}
+        
+        <div class="span-13 last">
+            <a href="#primary-content">til toppen</a>
+        </div>
+    </div>
+    
+    <div class="span-4 last" id="secondary-content">
+        
+        {% block "secondary-content" %}
+        {% endblock %}
+        
+        <h2>Ensembler</h2>
+        <ul>
+            <li><a href="http://syzygy.dk">Syzygy</a></li>
+            <li><a href="http://www.sanguine.dk/">Sanguine</a></li>
+            <li><a href="http://www.coronaguitarkvartet.dk/">Corona Guitar Kvartet</a></li>
+        </ul>
+        
+    </div>
+    
+</div>
+
+<div class="container" id="footer">
+    <div class="span-6">
+        <p>Kontakt: Mikkel Andersen <br />Tlf.: 2812 6472  <br />Mail: Info@mikkelandersen.dk</p>
+    </div>
+    
+    <div class="span-6">
+           <p></p> 
+    </div>
+        
+    <div class="span-6">
+        <p></p>
+    </div>
+        
+    <div class="span-6 last">
+        <p>Foto: Jesper Jørgensen &copy;</p>
+    </div>
+</div>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+// <![CDATA[
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9185943-1");
+pageTracker._trackPageview();
+} catch(err) {}
+// ]]>
+</script>
+
+</body>
+</html>

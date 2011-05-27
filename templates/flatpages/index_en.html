@@ -1,0 +1,13 @@
+{% extends "flatpages/default_en.html" %}
+
+{% load event_tags %} 
+
+{% block "content" %} 
+
+{{ flatpage.content }} 
+
+
+
+{% get_coming_events 100 %} {% include "cal/event_list_snippet_new.html" %} 
+
+{% endblock %}

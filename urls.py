@@ -7,7 +7,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^kalender/', include('mikkel.cal.urls')),
-    (r'^testimonials/', include('mikkel.testimonials.urls')),
     (r'^admin/', include(admin.site.urls)),
 )
 

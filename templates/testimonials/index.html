@@ -5,7 +5,9 @@
 
 {% block "content" %} 
 
-<h2>Hvad siger folk?</h2>
+{{ flatpage.content }}
+
+<h1>_Testimonials</h1>
 
 {% if q_list %} 
     
@@ -22,7 +24,14 @@
     {% endfor %} 
 
 {% else %}
-    <p>Der er desværre ingen Testimonials.</p>
+    <p>”Koncerten var en sand musikalsk åbenbaring. Sjældent har man kunnet høre musik spillet med så megen koncentration og fordybelse. Mikkel Andersen skabte et perfekt univers, fuldstændig indkapslet i sig selv, hvor hver tone var levende og meningsfyldt. Der blev spillet på alle sjælens strenge, fra dyb refleksion og rolige betragtninger til blid, nostalgisk eller lidenskabelig kærlighed.</p>
+<p>Mikkel Andersens koncert var et møde med skønheden, som åbner mod andre verdener og gør et stærkt indtryk på sjælen.”</p>
+<p><i>Monica Papazu, mag. art., anmelder for Randers Amtsavisen</i></p>
+<h1 align="center">________________</h1>
+<br />
+<p>”Her er Mikkel Andersen gået solo med værker af en håndfuld af guitarreperoirets kernekomponister i første halvdel af 1900-tallet - en velkomponeret sammensætning, hvor hver skæring giver én lyst til at lytte videre, og lige tage den næste med også.”</p>
+<p><i>Helle Kristensen, Danmarks Radio P2</i></p>
+
 {% endif %}
  
 {% endblock %}

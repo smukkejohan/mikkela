@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*	{
+	margin: 0px;
+	padding: 0px;
+	border:none;
+}
+
+li	{
+	list-style-type:none;
+}
+
+body	{
+	/*background-image:url(img/bg.jpg);
+	background-repeat:no-repeat;*/
+	background-color:#000000;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#loading	{
+	position:absolute; 
+	width:100%; 
+	text-align:center; 
+	top:300px;
+}
+
+#wrapper	{
+	position:absolute;
+	width: 1000px;
+}
+
+a	{
+	color:#00fdfd;
+	text-decoration:none;
+	font-style:italic;
+	outline:none;
+}
+
+.content_top	{
+	height: 20px;
+	background-color:#00fdfd;
+}
+
+
+/* Google Events */
+
+h2	{
+	font-size:11px;
+}
+
+.month	{
+	display:none;
+}
+
+/* SUPERSIZE CSS */
+
+#supersize{
+	position:fixed;
+}
+
+#supersize img {
+	height:100%;
+	width:100%;
+	position:absolute;
+}
+
+
+
+/* MENU */
+
+#menu	{
+	float:left;
+	margin-left:25px;
+}
+
+#menu a	{
+	text-indent:-999em;
+}
+
+#menu_home	{
+	margin-left:-22px;
+	background-image:url(img/logo.png);
+	width:328px;
+	height:96px;
+}
+
+#menu_home a {
+	width:328px;
+	height:96px;
+	display:block;
+}
+
+#main_navigation .menu a	{
+	height:22px;
+	width: 265px;
+	display:block;
+}
+
+#main_navigation .menu	{
+	width: 265px;
+	height: 16px;
+	background-position: 0 -16px;
+}
+
+#main_navigation .menu:hover	{
+	background-position:0 0;
+}
+
+#main_navigation .menu_eng a	{
+	height:22px;
+	width: 265px;
+	display:block;
+}
+
+#main_navigation .menu_eng	{
+	width: 265px;
+	height: 16px;
+	background-position: 0 0;
+}
+
+#main_navigation .menu_eng:hover	{
+	background-position:0 -16px;
+}
+
+li	{
+	margin-bottom:6px;
+}
+
+#main_navigation #menu_biografi	{
+	background-image:url(/img/menu/biografi.png);
+}
+
+#main_navigation #menu_musik	{
+	background-image:url(/img/menu/musik.png);
+}
+
+#main_navigation #menu_koncerter	{
+	background-image:url(/img/menu/koncerter.png);
+}
+
+#main_navigation #menu_testimonials	{
+	background-image:url(/img/menu/testimonials.png);
+}
+
+#main_navigation #menu_presse_fotos	{
+	background-image:url(/img/menu/presse_foto.png);
+}
+
+#main_navigation #menu_kontakt_booking	{
+	background-image:url(/img/menu/kontakt_booking.png);
+}
+
+#main_navigation #menu_biografi_eng	{
+	background-image:url(/img/menu/biografi_eng.png);
+}
+
+#main_navigation #menu_musik_eng	{
+	background-image:url(/img/menu/musik_eng.png);
+}
+
+#main_navigation #menu_koncerter_eng	{
+	background-image:url(/img/menu/koncerter_eng.png);
+}
+
+#main_navigation #menu_testimonials_eng	{
+	background-image:url(/img/menu/testimonials_eng.png);
+}
+
+#main_navigation #menu_presse_fotos_eng	{
+	background-image:url(/img/menu/presse_foto_eng.png);
+}
+
+#main_navigation #menu_kontakt_booking_eng	{
+	background-image:url(/img/menu/kontakt_booking_eng.png);
+}
+
+
+/* CONTENT	*/
+
+#content iframe	{
+	frameborder:0px;
+	margin-left:-20px;
+}
+
+#content_holder	{
+	margin-left:25px;
+	width:400px;
+	float:left;
+	padding-top:102px;
+}
+
+#content	{
+	background:url(/img/shade.png) repeat-y;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:20px;
+}
+
+#content h1	{
+	color:#00fdfd;
+	font-weight:bold;
+	font-size: 13px;
+	padding-top:20px;
+	text-transform:uppercase;
+}
+
+#content p	{
+	font-size: 11px;
+	color:#FFF;
+	line-height:14px;
+	margin-top:15px;
+	letter-spacing:1px;
+}
+
+#content li a	{
+	font-size: 11px;
+	line-height:14px;
+	letter-spacing:1px;
+}
+
+
+
+/* CONTENT RIGHT */
+
+#english_site	{
+	top:0px;
+	right:0px;
+	background-color:#00fdfd;
+	position:absolute;
+	padding-left:4px;
+	padding-right:4px;
+	margin-right:4px;
+	margin-top:-2px;
+}
+
+#english_site a	{
+	font-size: 9px;
+	font-style:italic;
+	font-weight:bold;
+	color:#000;
+}
+
+#content_right	{
+	margin-left:20px;
+	width: 200px;
+	float:left;
+	padding-top:102px;
+}
+
+#content_right h1	{
+	font-size: 11px;
+	font-style:italic;
+	color:#000;
+	padding-left:10px;
+	padding-top:4px;
+}
+
+#content_right p	{
+	font-size: 10px;
+	color:#FFF;
+	line-height:13px;
+	letter-spacing:1px;
+	margin-bottom:10px;
+}
+
+#status	{
+	background:url(/img/shade.png) repeat-y;
+	padding:20px;
+	margin-bottom:30px;
+}
+
+#status ul, #status li	{
+	font-size: 10px;
+	color:#FFF;
+	line-height:13px;
+	letter-spacing:1px;
+}
+
+
+
+#koncerter	{
+	background:url(/img/shade.png) repeat-y;
+	padding:20px;
+}
+
+#social_media	{
+	margin-top:13px;
+	float:right;
+}
+
+#social_media_twitter	{
+	float:left;
+	background-image:url(/img/twitter.png);
+	width: 28px;
+	height: 28px;
+	background-position: 0 0;
+}
+
+#social_media_twitter:hover	{
+	background-position:0 -28px;
+}
+
+#social_media_twitter a	{
+	display:block;
+	width:28px;
+	height:28px;
+}
+
+#social_media_facebook	{
+	float:left;
+	background-image:url(/img/facebook.png);
+	width: 28px;
+	height: 28px;
+	background-position: 0 0;
+}
+
+#social_media_facebook:hover	{
+	background-position:0 -28px;
+}
+
+#social_media_facebook a	{
+	display:block;
+	width:28px;
+	height:28px;
+}

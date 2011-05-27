@@ -1,0 +1,10 @@
+{% if event_list %} 
+    {% for e in event_list %}
+		<p>{{ e.date.date|date }}, kl. {{ e.date.time|time }}<br />
+		<span style="text-transform:uppercase;font-weight:bold;">{% if e.link %}<a href="{{ e.link }}" rel="external" title="{{ e.link }} ">{{ e.name }}</a>{% else %} {{ e.name }}{% endif %}</span><br />
+		{% if e.address %}<a href="http://maps.google.com/maps?&amp;q={{ e.address|urlencode }}" rel="external" title="vis på kort">{{ e.loc }}</a>{% else %}{{ e.loc }}{% endif %}
+		</p>
+    {% endfor %}
+{% else %}
+    <p>Der er desværre ikke planlagt nogen arrangementer i den nærmeste fremtid.</p>
+{% endif %}

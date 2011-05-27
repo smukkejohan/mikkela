@@ -1,104 +1,120 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="verify-v1" content="kdBHScTHXWxLE2kIUSU+d02jJN1Bimkz8AxjrB/6b+s=" >
-    <!-- Blueprint CSS framework -->
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/screen.css" 
-        type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/print.css" 
-        type="text/css" media="print" />
-     
-    <!--[if IE]><link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/ie.css" 
-        type="text/css" media="screen, projection" /><![endif]-->
-     
-    <!-- Custom CSS --> 
-    <link rel="stylesheet" type="text/css" media="all" 
-		    href="{{ MEDIA_URL }}css/base.css" />	
-	    
-    <title>{% block "title" %}{% endblock %} - Mikkel Andersen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/style.css">
+<link href="{{ MEDIA_URL }}js/jquery.tweet.css" rel="stylesheet">
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/supersized.2.0.js"></script>
+<script src="{{ MEDIA_URL }}js/jquery.tweet.js" charset="utf-8"></script>
+<script type="text/javascript">  
+		$(function(){
+			$.fn.supersized.options = {  
+				startwidth: 640,  
+				startheight: 480,
+				vertical_center: 1,
+				slideshow: 1,
+				navigation: 1,
+				transition: 1, //0-None, 1-Fade, 2-slide top, 3-slide right, 4-slide bottom, 5-slide left
+				pause_hover: 0,
+				slide_counter: 1,
+				slide_captions: 1,
+				slide_interval: 3000  
+			};
+	        $('#supersize').supersized(); 
+	    });
+		
 
+		$(document).ready(function(){
+				$('a[rel="external"]').attr('target', '_blank');
+				
+		 $("#status").tweet({
+			join_text: "auto",
+			username: "mikkelainfo",
+			avatar_size: 0,
+			count: 3,
+			auto_join_text_default: "", 
+			auto_join_text_ed: "",
+			auto_join_text_ing: "",
+			auto_join_text_reply: "",
+			auto_join_text_url: "",
+			loading_text: "loading tweets..."
+		  });				
+		});
+</script>
+<title>Mikkel Andersen _ {% block "title" %}{% endblock %}</title>
 </head>
+
 <body>
 
-<div class="container" id="header">
-    <!--<a href="/">Mikkel Andersen</a>-->
-    <h1>{% block "headline" %}Mikkel{% endblock %}</h1>
-</div>    
+<div id="supersize">
+<img src="{{ MEDIA_URL }}img/bg.jpg" alt="Background"/>
+</div>
 
-<div class="container" id="main">
-    <div class="span-6" id="sidebar">
-        <ul id="navigation">
-            <li><a href="/">
-                <span>Forside</span></a></li>
-            <li><a href="/virksomhed/">
-                <span>Virksomhed</span></a></li>
-            <li><a href="/kirke/">
-                <span>Kirke</span></a></li>
-            <li><a href="/bryllup/">
-                <span>Bryllup</span></a></li>
-            <li><a href="/privat/">
-                <span>Privat</span></a></li>
-            <li><a href="/kalender/">
-                <span>Kalender</span></a></li>
-            <li><a href="/mikkel/">
-                <span>Mikkel Andersen</span></a></li>
-            <li><a href="/testimonials/">
-                <span>Testimonials</span></a></li>
-            <li><a href="/musik/">
-                <span>Musik</span></a></li>
-            <li><a href="mailto:info@mikkelandersen.dk?subject=bestil_cd" title="Email info@mikkelandersen.dk for at bestille CD">Bestil CD</a> 
-        </ul>
-        
-        
-        
-    </div>
+<div id="wrapper">
+
+<div id="menu">
+    <ul id="main_navigation">
+    	<li class="menu_home"><a href="/"><img src="{{ MEDIA_URL }}img/logo.png" alt="Mikkel Andersen Logo" id="logo"></a></li>
+        <li id="menu_biografi" class="menu"><a href="/biografi/">biografi</a></li>
+        <li id="menu_musik" class="menu"><a href="/musik/"></a></li>
+        <li id="menu_koncerter" class="menu"><a href="/koncerter/"></a></li>
+        <li id="menu_testimonials" class="menu"><a href="/testimonials/"></a></li>
+        <li id="menu_presse_fotos" class="menu"><a href="/presse-foto/"></a></li>
+        <li id="menu_kontakt_booking" class="menu"><a href="/kontakt-booking/"></a></li>
+    </ul>
+</div> <!--MENU DIV END-->
+
+
+
+<div id="content_holder">
+
+    <div class="content_top"></div>
     
-    <div class="span-13 append-1" id="primary-content">
-    
+    <div id="content">
+
         {% block "content" %}
         {% endblock %}
         
-        <div class="span-13 last">
-            <a href="#primary-content">til toppen</a>
-        </div>
     </div>
-    
-    <div class="span-4 last" id="secondary-content">
-        
-        {% block "secondary-content" %}
-        {% endblock %}
-        
-        <h2>Ensembler</h2>
-        <ul>
-            <li><a href="http://syzygy.dk">Syzygy</a></li>
-            <li><a href="http://www.sanguine.dk/">Sanguine</a></li>
-            <li><a href="http://www.coronaguitarkvartet.dk/">Corona Guitar Kvartet</a></li>
-        </ul>
-        
-    </div>
-    
-</div>
 
-<div class="container" id="footer">
-    <div class="span-6">
-        <p>Kontakt: Mikkel Andersen <br />Tlf.: 2812 6472  <br />Mail: Info@mikkelandersen.dk</p>
+</div> <!--CONTENT DIV END-->
+
+
+
+<div id="content_right">
+
+	<div id="english_site">
+    	<a href="/en/">ENGLISH</a>
+    </div>
+	
+    <div class="content_top">
+        	<h1>_STATUS</h1>
+    </div>
+        
+    <div id="status">
+    
     </div>
     
-    <div class="span-6">
-           <p></p> 
+    <div class="content_top">
+        	<h1>_KONCERTER</h1>
     </div>
         
-    <div class="span-6">
-        <p></p>
-    </div>
+    <div id="koncerter">
+        {% load event_tags %} 
+        {% get_coming_events 5 %} {% include "cal/event_list_snippet_new.html" %}
         
-    <div class="span-6 last">
-        <p>Foto: Jesper Jørgensen &copy;</p>
     </div>
-</div>
+    
+    <div id="social_media">
+    	<a href="http://www.twitter.com/mikkelainfo" rel="external"><div id="social_media_twitter"></div></a>
+        <a href="http://www.facebook.com/home.php?#!/profile.php?id=1097403554" rel="external"><div id="social_media_facebook"></div></a>
+    </div>
 
+
+</div> <!--CONTENT RIGHT END-->
+
+</div> <!-- WRAPPER END -->
 <!-- Google Analytics -->
 <script type="text/javascript">
 // <![CDATA[
@@ -112,6 +128,5 @@ pageTracker._trackPageview();
 } catch(err) {}
 // ]]>
 </script>
-
 </body>
 </html>
