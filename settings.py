@@ -15,10 +15,6 @@ else:
     DEBUG = False
     MEDIA_URL = 'http://static.mikkelandersen.dk/'
     ADMIN_MEDIA_PREFIX = MEDIA_URL + '/admin/'
-    DATABASE_ENGINE = 'postgresql_psycopg2'
-    DATABASE_USER = 'mikkel'
-    DATABASE_NAME = 'mikkelandersen_db'
-    DATABASE_PORT = '5434'
     
 TEMPLATE_DEBUG = DEBUG
 
