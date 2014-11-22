@@ -4,9 +4,9 @@ import sys
 import platform
 import django.conf.global_settings as DEFAULT_SETTINGS
 
-
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
+sys.path.append(BASE_PATH)
 sys.path.append(BASE_PATH + '/apps')
 
 ADMINS = (('Johan Bichel Lindegaard', 'mr.bichel@gmail.com'))
@@ -74,7 +74,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'mikkela.urls'
 
 TEMPLATE_DIRS = (
     BASE_PATH + '/templates/',
