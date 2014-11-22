@@ -1,14 +1,14 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from mikkel.cal.models import Event
+from testimonials.models import Testimonial
 #from forms import EventForm
 
 def index(request):
     """
-    Events of the coming months sorted in to a list for each month
+    Testimonials
     """
-    
-    return render_to_response('cal/index.html', {
-        'event_list': Event.future.all(), 
+
+    return render_to_response('testimonials/index.html', {
+        'q_list': Testimonial.objects.all(),
         #'form': EventForm()
     }, context_instance=RequestContext(request))

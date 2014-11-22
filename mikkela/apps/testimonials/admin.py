@@ -1,5 +1,5 @@
 from django.contrib import admin
-from mikkel.testimonials.models import Testimonial
+from testimonials.models import Testimonial
 
 class TestimonialAdmin(admin.ModelAdmin):
     fields = ('quote', 'name', 'place', 'date', 'event')

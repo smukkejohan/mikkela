@@ -1,18 +1,22 @@
-from django.conf.urls.defaults import *
-from mikkel.cal.models import Event
+# -*- coding: utf-8 -*-
+
+from django.conf import settings
+from django.conf.urls import patterns, url, include
+
+from cal.models import Event
 import settings
 
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^kalender/', include('mikkel.cal.urls')),
+    (r'^kalender/', include('cal.urls')),
     (r'^admin/', include(admin.site.urls)),
 )
 
 urlpatterns += patterns('django.views.generic.simple',
-    #url(r'^$', 'direct_to_template', 
-    #    {'template': 'index.html', 
+    #url(r'^$', 'direct_to_template',
+    #    {'template': 'index.html',
     #        'extra_context':{
     #            'event_list': Event.future.all()[:4]
     #        }

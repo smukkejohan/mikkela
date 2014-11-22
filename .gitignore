@@ -4,3 +4,5 @@
 dev.db
 local_settings.py
 static/admin
+test
+settings_local.py

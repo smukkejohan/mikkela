@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css">
+<link href="{{ STATIC_URL }}js/jquery.tweet.css" rel="stylesheet">
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/supersized.2.0.js"></script>
+<script src="{{ STATIC_URL }}js/jquery.tweet.js" charset="utf-8"></script>
+<script type="text/javascript">
+		$(function(){
+			$.fn.supersized.options = {
+				startwidth: 640,
+				startheight: 480,
+				vertical_center: 1,
+				slideshow: 1,
+				navigation: 1,
+				transition: 1, //0-None, 1-Fade, 2-slide top, 3-slide right, 4-slide bottom, 5-slide left
+				pause_hover: 0,
+				slide_counter: 1,
+				slide_captions: 1,
+				slide_interval: 3000
+			};
+	        $('#supersize').supersized();
+	    });
+
+
+		$(document).ready(function(){
+				$('a[rel="external"]').attr('target', '_blank');
+
+		 $("#status").tweet({
+			join_text: "auto",
+			username: "mikkelainfo",
+			avatar_size: 0,
+			count: 3,
+			auto_join_text_default: "",
+			auto_join_text_ed: "",
+			auto_join_text_ing: "",
+			auto_join_text_reply: "",
+			auto_join_text_url: "",
+			loading_text: "loading tweets..."
+		  });
+		});
+</script>
+<title>Mikkel Andersen _ {% block "title" %}{% endblock %}</title>
+</head>
+
+<body>
+
+<div id="supersize">
+<img src="{{ STATIC_URL }}img/bg.jpg" alt="Background"/>
+</div>
+
+<div id="wrapper">
+
+<div id="menu">
+    <ul id="main_navigation">
+    	<li class="menu_home"><a href="/"><img src="{{ STATIC_URL }}img/logo.png" alt="Mikkel Andersen Logo" id="logo"></a></li>
+        <li id="menu_biografi" class="menu"><a href="/biografi/">biografi</a></li>
+        <li id="menu_musik" class="menu"><a href="/musik/"></a></li>
+        <li id="menu_koncerter" class="menu"><a href="/koncerter/"></a></li>
+        <li id="menu_testimonials" class="menu"><a href="/testimonials/"></a></li>
+        <li id="menu_presse_fotos" class="menu"><a href="/presse-foto/"></a></li>
+        <li id="menu_kontakt_booking" class="menu"><a href="/kontakt-booking/"></a></li>
+    </ul>
+</div> <!--MENU DIV END-->
+
+
+
+<div id="content_holder">
+
+    <div class="content_top"></div>
+
+    <div id="content">
+
+        {% block "content" %}
+        {% endblock %}
+
+    </div>
+
+</div> <!--CONTENT DIV END-->
+
+
+
+<div id="content_right">
+
+	<div id="english_site">
+    	<a href="/en/">ENGLISH</a>
+    </div>
+
+    <div class="content_top">
+        	<h1>_STATUS</h1>
+    </div>
+
+    <div id="status">
+
+    </div>
+
+    <div class="content_top">
+        	<h1>_KONCERTER</h1>
+    </div>
+
+    <div id="koncerter">
+        {% load event_tags %}
+        {% get_coming_events 5 %} {% include "cal/event_list_snippet_new.html" %}
+
+    </div>
+
+    <div id="social_media">
+    	<a href="http://www.twitter.com/mikkelainfo" rel="external"><div id="social_media_twitter"></div></a>
+        <a href="http://www.facebook.com/home.php?#!/profile.php?id=1097403554" rel="external"><div id="social_media_facebook"></div></a>
+    </div>
+
+
+</div> <!--CONTENT RIGHT END-->
+
+</div> <!-- WRAPPER END -->
+<!-- Google Analytics -->
+<script type="text/javascript">
+// <![CDATA[
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9185943-1");
+pageTracker._trackPageview();
+} catch(err) {}
+// ]]>
+</script>
+</body>
+</html>
