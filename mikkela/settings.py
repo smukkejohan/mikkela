@@ -74,7 +74,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 
-ROOT_URLCONF = 'mikkela.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     BASE_PATH + '/templates/',

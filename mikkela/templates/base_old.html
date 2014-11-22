@@ -5,22 +5,22 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="verify-v1" content="kdBHScTHXWxLE2kIUSU+d02jJN1Bimkz8AxjrB/6b+s=" >
     <!-- Blueprint CSS framework -->
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/screen.css" 
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/blueprint/screen.css"
         type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/print.css" 
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/blueprint/print.css"
         type="text/css" media="print" />
-     
-    <!--[if IE]><link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/ie.css" 
-        type="text/css" media="screen, projection" /><![endif]-->
-     
-    <!-- Custom CSS --> 
-    <link rel="stylesheet" type="text/css" media="all" 
-		    href="{{ MEDIA_URL }}css/base.css" />	
 
-  <link href="{{ MEDIA_URL }}js/jquery.tweet.css" rel="stylesheet">
-  <script src="{{ MEDIA_URL }}js/jquery-1.3.2.js"></script>
-  <script src="{{ MEDIA_URL }}js/jquery.tweet.js" charset="utf-8"></script>
-	    
+    <!--[if IE]><link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/ie.css"
+        type="text/css" media="screen, projection" /><![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" media="all"
+		    href="{{ STATIC_URL }}css/base.css" />
+
+  <link href="{{ STATIC_URL }}js/jquery.tweet.css" rel="stylesheet">
+  <script src="{{ STATIC_URL }}js/jquery-1.3.2.js"></script>
+  <script src="{{ STATIC_URL }}js/jquery.tweet.js" charset="utf-8"></script>
+
     <title>{% block "title" %}{% endblock %} - Mikkel Andersen</title>
   <script>
     jQuery(document).ready(function($) {
@@ -29,7 +29,7 @@
         username: "seaofclouds",
         avatar_size: 48,
         count: 3,
-        auto_join_text_default: "we said,", 
+        auto_join_text_default: "we said,",
         auto_join_text_ed: "we",
         auto_join_text_ing: "we were",
         auto_join_text_reply: "we replied",
@@ -45,7 +45,7 @@
 <div class="container" id="header">
     <!--<a href="/">Mikkel Andersen</a>-->
     <h1>{% block "headline" %}Mikkel{% endblock %}</h1>
-</div>    
+</div>
 
 <div class="container" id="main">
     <div class="span-6" id="sidebar">
@@ -68,52 +68,52 @@
                 <span>Testimonials</span></a></li>
             <li><a href="/musik/">
                 <span>Musik</span></a></li>
-            <li><a href="mailto:info@mikkelandersen.dk?subject=bestil_cd" title="Email info@mikkelandersen.dk for at bestille CD">Bestil CD</a> 
+            <li><a href="mailto:info@mikkelandersen.dk?subject=bestil_cd" title="Email info@mikkelandersen.dk for at bestille CD">Bestil CD</a>
         </ul>
-        
-        
-        
+
+
+
     </div>
-    
+
     <div class="span-13 append-1" id="primary-content">
-    
+
         {% block "content" %}
         {% endblock %}
-        
+
         <div class="span-13 last">
             <a href="#primary-content">til toppen</a>
         </div>
     </div>
-    
+
     <div class="span-4 last" id="secondary-content">
-        
+
         {% block "secondary-content" %}
         {% endblock %}
-        
+
         <h2>Ensembler</h2>
         <ul>
             <li><a href="http://syzygy.dk">Syzygy</a></li>
             <li><a href="http://www.sanguine.dk/">Sanguine</a></li>
             <li><a href="http://www.coronaguitarkvartet.dk/">Corona Guitar Kvartet</a></li>
         </ul>
-        
+
     </div>
-    
+
 </div>
 
 <div class="container" id="footer">
     <div class="span-6">
         <p>Kontakt: Mikkel Andersen <br />Tlf.: 2812 6472  <br />Mail: Info@mikkelandersen.dk</p>
     </div>
-    
+
     <div class="span-6">
-           <p></p> 
+           <p></p>
     </div>
-        
+
     <div class="span-6">
         <p></p>
     </div>
-        
+
     <div class="span-6 last">
         <p>Foto: Jesper Jørgensen &copy;</p>
     </div>
