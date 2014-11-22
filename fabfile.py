@@ -6,7 +6,7 @@ env.directory = '/home/mikkelandersen/srv/mikkela'
 env.activate = 'source /home/mikkelandersen/.virtualenvs/mikkelandersen/bin/activate'
 
 def deploy():
-    local('git push')
+    local('git push origin master')
     with cd(env.directory):
         with prefix(env.activate):
             run('git pull')

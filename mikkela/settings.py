@@ -39,6 +39,8 @@ DATETIME_FORMAT = 'd/m - Y H:i'
 DATE_FORMAT = 'd/m - Y'
 TIME_FORMAT = 'H:i'
 
+ALLOWED_HOSTS = ['mikkelandersen.dk']
+
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = (
